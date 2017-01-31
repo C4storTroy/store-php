@@ -1,24 +1,28 @@
-<?php include 'header.php'; ?>
-<?php include 'connection.php'; ?>
 <?php
+include('header.php');
+include('connection.php');
+include('product-db.php');
 
- function addProduct($conn, $name, $price){
-   $query = "insert into products (name, price) values ('{$name}', {$price});";
-   return mysqli_query($conn, $query);
+ $name = $_POST['name'];
+ $price = $_POST['price'];
+ $description = $_POST['description'];
+ $category_id = $_POST['category_id'];
+
+ if(array_key_exists("used", $_POST)){
+   $used = "true";
+ } else {
+   $used = "false";
  }
- $name = $_GET['name'];
- $price = $_GET['price'];
 
- if (addProduct($conn, $name, $price)) {
- ?>
+ if (addProduct($conn, $name, $price, $description, $category_id, $used)) {
+?>
    <p class="text-success">Adding Product <?= $name; ?> price: <?= $price; ?>  was success!</p>
- <?php
+<?php
  } else {
    $msg = mysqli_error($conn);
- ?>
+?>
    <p class="text-danger">Product <?= $name; ?>  was not added: <?= $msg ?></p>
- <?php
+<?php
  }
 ?>
-
 <?php include 'footer.php'; ?>
