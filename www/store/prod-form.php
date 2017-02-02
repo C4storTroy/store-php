@@ -1,6 +1,8 @@
 <?php include('header.php');
 include('connection.php');
 include('category-db.php');
+include('user-logic.php');
+verifyUser();
 $categories = listCategory($conn);
 ?>
   <h1>Product Form</h1>

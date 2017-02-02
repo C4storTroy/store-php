@@ -2,6 +2,9 @@
 include('header.php');
 include('connection.php');
 include('product-db.php');
+include('user-logic.php');
+
+verifyUser();
 
  $name = $_POST['name'];
  $price = $_POST['price'];

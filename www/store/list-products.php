@@ -1,7 +1,10 @@
 <?php
 include('header.php');
 include('connection.php');
-include('product-db.php');?>
+include('product-db.php');
+include("user-logic.php");
+verifyUser();
+?>
 <?php
 if(array_key_exists("removed", $_GET) && $_GET["removed"]==true){
 ?>
