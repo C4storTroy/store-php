@@ -1,17 +1,15 @@
 <?php
-include('header.php');
+include("header.php");
 include('connection.php');
 include('product-db.php');
 include("user-logic.php");
 verifyUser();
 ?>
+<?php if(isset($_SESSION["success"])) { ?>
+<p class="alert-success"><?=$_SESSION["success"]?></p>
 <?php
-if(array_key_exists("removed", $_GET) && $_GET["removed"]==true){
-?>
-  <p class="alert-success"> Product was removed</p>
-<?php
-}
-?>
+unset($_SESSION["success"]);
+} ?>
 <table class="table table-striped table-bordered">
 <?php
     $products = listProducts($conn);
@@ -35,4 +33,4 @@ if(array_key_exists("removed", $_GET) && $_GET["removed"]==true){
     endforeach
 ?>
 </table>
-<?php include ('footer.php');?>
+<?php include ("footer.php");?>

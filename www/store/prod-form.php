@@ -1,4 +1,4 @@
-<?php include('header.php');
+<?php include("header.php");
 include('connection.php');
 include('category-db.php');
 include('user-logic.php');
@@ -41,4 +41,4 @@ $categories = listCategory($conn);
     </tr>
   </table>
   </form>
-<?php include ('footer.php');?>
+<?php include ("footer.php");?>

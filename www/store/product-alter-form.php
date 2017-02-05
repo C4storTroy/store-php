@@ -1,4 +1,4 @@
-<?php include('header.php');
+<?php include("header.php");
 include('connection.php');
 include('category-db.php');
 include('product-db.php');
@@ -52,4 +52,4 @@ $used = $product['used'] ? "checked='checked'" : "";
     </tr>
   </table>
   </form>
-<?php include ('footer.php');?>
+<?php include ("footer.php");?>

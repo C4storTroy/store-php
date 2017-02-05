@@ -1,23 +1,23 @@
-<?php include('header.php');
-include('user-logic.php');
+<?php include('user-logic.php');
+include("header.php");
 ?>
-<?php if(isset($_GET['login']) && $_GET['login']==true) { ?>
-<p class="alert-success">Login success</p>
-<?php } ?>
-<?php if(isset($_GET['login']) && $_GET['login']==false) { ?>
-<p class="alert-danger">user or password is invalid</p>
-<?php } ?>
-<?php if(isset($_GET['securityFail']) && $_GET['securityFail']==true) { ?>
-<p class="alert-danger">You have no access</p>
-<?php } ?>
-
+<?php if(isset($_SESSION["success"])) { ?>
+<p class="alert-success"><?=$_SESSION["success"]?></p>
+<?php
+unset($_SESSION["success"]);
+} ?>
+<?php if(isset($_SESSION["danger"])) { ?>
+<p class="alert-danger"><?=$_SESSION["danger"]?></p>
+<?php
+unset($_SESSION["danger"]);
+} ?>
 
 <h1>Welcome!</h1>
 
 <?php if(userIsLogged()) {?>
   <p class="text-success">You are logged as <?=userLogged()?> </p>
+  <a href="logout.php">Logout</a>
 <?php } else { ?>
-
 <h2>Login</h2>
 <form action="login.php" method="post">
 <table class="table">
@@ -35,4 +35,4 @@ include('user-logic.php');
 </table>
 </form>
 <?php } ?>
-<?php include('footer.php');?>
+<?php include("footer.php");?>

@@ -1,5 +1,5 @@
 <?php
-include('header.php');
+include("header.php");
 include('connection.php');
 include('product-db.php');
 
@@ -26,4 +26,4 @@ include('product-db.php');
 <?php
  }
 ?>
-<?php include 'footer.php'; ?>
+<?php include ("myfooter.php"); ?>
