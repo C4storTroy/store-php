@@ -1,17 +1,6 @@
 <?php include('user-logic.php');
 include("header.php");
 ?>
-<?php if(isset($_SESSION["success"])) { ?>
-<p class="alert-success"><?=$_SESSION["success"]?></p>
-<?php
-unset($_SESSION["success"]);
-} ?>
-<?php if(isset($_SESSION["danger"])) { ?>
-<p class="alert-danger"><?=$_SESSION["danger"]?></p>
-<?php
-unset($_SESSION["danger"]);
-} ?>
-
 <h1>Welcome!</h1>
 
 <?php if(userIsLogged()) {?>

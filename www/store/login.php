@@ -13,3 +13,4 @@ if($user == null){
   header("Location: index.php");
 }
 die();
+?>
