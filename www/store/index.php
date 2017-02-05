@@ -1,5 +1,5 @@
-<?php include('user-logic.php');
-include("header.php");
+<?php require_once('user-logic.php');
+require_once("header.php");
 ?>
 <h1>Welcome!</h1>
 

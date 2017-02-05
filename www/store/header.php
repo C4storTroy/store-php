@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-include("helper.php"); ?>
+require_once("helper.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,7 +20,7 @@ include("helper.php"); ?>
           <ul class="nav navbar-nav">
             <li><a href="prod-form.php">Add products</a></li>
             <li><a href="list-products.php">Products</a></li>
-            <li><a href="about.php">About us </a></li>
+            <li><a href="contact.php">Contact us </a></li>
           </ul>
         </div>
       </div>

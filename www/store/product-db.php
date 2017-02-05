@@ -1,5 +1,8 @@
 <?php
+require_once("connection.php");
 function addProduct($conn, $name, $price, $description, $category_id, $used){
+  $name = mysqli_real_escape_string($conn,$name);
+  $description = mysqli_real_escape_string($conn,$description);
   $query = "insert into products (name, price, description, category_id, used)
   values ('{$name}', {$price}, '{$description}', $category_id, {$used});";
   return mysqli_query($conn, $query);

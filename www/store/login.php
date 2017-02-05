@@ -1,7 +1,6 @@
 <?php
-include ('connection.php');
-include ('user-db.php');
-include('user-logic.php');
+require_once('user-db.php');
+require_once('user-logic.php');
 
 $user = searchUser($conn, $_POST['email'], $_POST['password']);
 if($user == null){

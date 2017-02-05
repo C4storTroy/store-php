@@ -1,7 +1,6 @@
 <?php
-include("header.php");
-include('connection.php');
-include('product-db.php');
+require_once("header.php");
+require_once('product-db.php');
 
  $id = $_POST['id'];
  $name = $_POST['name'];
@@ -26,4 +25,4 @@ include('product-db.php');
 <?php
  }
 ?>
-<?php include ("myfooter.php"); ?>
+<?php include ("footer.php"); ?>

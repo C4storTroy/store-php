@@ -1,8 +1,7 @@
 <?php
-include("header.php");
-include('connection.php');
-include('product-db.php');
-include('user-logic.php');
+require_once("header.php");
+require_once('product-db.php');
+require_once('user-logic.php');
 verifyUser();
  $name = $_POST['name'];
  $price = $_POST['price'];
